@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SushAnt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="photo">
+            <img alt="" src="habibi.jpg" style="width:50px; height: 50px; border-radius: 90%;">
+        </div>
+        <div class="medium">Cash App</div>
+        <div class="second">
+            <img alt="" src="Cash_App-Logo.wine.png" style="width:50px; height: 50px;">
+        </div>
+    </div>
+
+    <div class="mid">
+        <h1>$</h1><div id="number">17392924</div>
+    </div>
+
+    <div class="send">
+        Enter Amount to Transfer:
+    </div><br>
+
+    <div class="field">
+        <form id="walletForm" onsubmit="return handleSubmit()">
+            <input type="text" placeholder="Enter Username" id="username" required>
+            <br>
+            <input type="number" placeholder="Enter Amount" id="balance" required>
+            <br>
+            <br>
+            <div class="button">
+                <!-- The "Pay" button -->
+                <button id="sendto" type="button" onclick="payNow()">Pay</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Function to handle "Pay" button click and redirect after 3 seconds
+        function payNow() {
+            var button = document.getElementById('sendto');
+            button.disabled = true;
+            button.innerText = "Processing..."; // Change text to indicate processing
+
+            // Get form values
+            const username = document.getElementById('username').value;
+            const balance = document.getElementById('balance').value;
+
+            // Set a 3-second delay before redirect
+            setTimeout(function() {
+                // Redirect to the second page with parameters
+                window.location.href = `paymentdone.html?username=${encodeURIComponent(username)}&balance=${encodeURIComponent(balance)}`;
+            }, 3000); // 3000 ms = 3 seconds
+        }
+
+        // Function to handle form submission (if needed)
+        function handleSubmit() {
+            // Return false to prevent the form from submitting and refreshing the page
+            return false;
+        }
+    </script>
+</body>
+</html>

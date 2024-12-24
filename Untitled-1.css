@@ -1,0 +1,49 @@
+/* General body and page styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Style for the profile circle */
+.profile-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #4CAF50; /* Green background for the profile */
+    color: white;
+    text-align: center;
+    line-height: 80px; /* Center the text vertically */
+    font-size: 30px;
+    font-weight:lighter;
+    margin-bottom: 1px;
+}
+
+/* Style for the username (red color) */
+.red-text {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;  /* Align items vertically */
+    justify-content: center;  /* Center elements vertically */
+    align-items: center;
+}
+
+/* Style for the balance (green color) */
+.green-text {
+    color: rgb(0, 147, 0);
+    font-weight: bold;
+    font-size: 55px;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 1px;
+    display: flex;
+    flex-direction: column;  /* Align items vertically */
+    justify-content: center;  /* Center elements vertically */
+    align-items: center;
+}
+
+/* Additional style for heading */
+h1 {
+    color: #333;
+}

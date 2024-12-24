@@ -1,0 +1,55 @@
+/* General body and page styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;  /* Ensure the body takes up the full height of the viewport */
+  display: flex;
+  justify-content: center;  /* Horizontally center */
+  align-items: center;  /* Vertically center */
+  flex-direction: column;  /* Stack the elements vertically */
+  text-align: center;  /* Center text inside the body */
+}
+
+/* Style for the profile circle (user's first letter) */
+.profile-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #4CAF50; /* Green background for the profile */
+  color: white;
+  text-align: center;
+  line-height: 80px; /* Center the text vertically */
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;  /* Add space between the circle and the balance */
+}
+
+/* Style for the balance (green circle) */
+.green-text {
+  display: inline-block;  /* Ensures that the text is treated as a block and can have margin */
+  background-color: green;  /* Green background for the balance */
+  color: white;
+  font-weight: bold;
+  padding: 15px 30px; /* Add some padding around the text */
+  border-radius: 25px;  /* Optional: rounded edges for the balance box */
+  font-size: 24px;
+  text-align: center; /* Aligns the text to the center within the box */
+  vertical-align: middle;
+  margin: 10px 0;  /* Adds margin to the top and bottom of the green text box */
+}
+
+/* Style for the username (red color) */
+.red-text {
+  color: black;
+  font-weight: bold;
+  display: inline-block;  /* Ensure that it's treated as a block-level element */
+  margin: 10px 0;  /* Adds margin to the top and bottom of the red text */
+  font-size: 24px;  /* Optional: font size for better readability */
+}
+
+/* Additional style for heading */
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}

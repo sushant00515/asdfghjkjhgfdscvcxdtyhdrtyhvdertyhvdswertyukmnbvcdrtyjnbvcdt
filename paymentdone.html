@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Receipt</title>
+    <link rel="stylesheet" href="Untitled-1.css">
+    <script src="document.js"></script>
+    <style>
+       
+        h1 {
+            font-size: 100px;
+            font-weight: bold;
+            color: #020202;
+            text-align: center;
+            margin-top: 0%;
+        }
+
+        user-0  {
+            font-size: 50px;
+            font-weight: bold;
+            color: #000000;
+            margin-top: -33px;
+            text-align: center;
+        }
+
+        user-1 {
+            font-size: 50px;
+            font-weight: bold;
+            color: #27ae60;
+            margin-top: 130px;
+            margin-bottom: 130px;
+            text-align: center;
+        }
+        .png {
+            margin-top: 2px;
+            vertical-align: middle;
+            align-items: center;
+        }
+       
+        .total {
+            font-size: 50px;
+            font-weight: bold;
+            color: #27ae60;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 40px;
+        }
+
+        .lst {
+            margin-top: 3px;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="png">
+            <div style="display: grid; place-items: center;">
+        <img src="ciros.png" width="325" >
+        <br>
+        <br>
+        <br>
+        <br>
+         <!-- Displaying the user profile circle -->
+    <div class="profile-circle" id="profile-circle"></div>
+
+    <p id="info"></p>
+
+    <script src="variables.js"></script>
+    <script>
+        function displayInfo() {
+            const variableHandler = new VariableHandler();
+            const { username, balance } = variableHandler.getUrlParams();
+
+            const infoElement = document.getElementById('info');
+            const profileCircleElement = document.getElementById('profile-circle');
+
+            if (username && balance) {
+                // Set the first letter of the username inside the circle
+                const firstLetter = username.charAt(0).toUpperCase();
+                profileCircleElement.innerText = firstLetter;
+
+                // Display the username and balance
+                infoElement.innerHTML = `<span class="red-text">${username}</span>
+                         Payment to $<span class="gray-text">${username}</span><br><br>
+                    <span class="green-text">${balance}</span>
+                `;
+            } else {
+                infoElement.innerHTML = 'No information found.';
+            }
+        }
+
+        // Call the function to display the data
+        displayInfo();
+    </script>
+       
+        <div class="container">
+            <div class="lst">
+                <div style="display: grid; place-items: center;">
+        <img src="recepe.png" width="332px" >
+    </div>
+
+
+    
+
+</body>
+</html>
