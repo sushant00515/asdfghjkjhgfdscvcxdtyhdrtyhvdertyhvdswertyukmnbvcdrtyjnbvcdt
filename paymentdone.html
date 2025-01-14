@@ -102,6 +102,14 @@
         // Call the function to display the data
         displayInfo();
     </script>
+                <script>
+    // Redirect back to the first page when the second page is refreshed
+    window.onload = function () {
+        if (performance.navigation.type === 1) { // Detect if the page is reloaded
+            window.location.href = "index.html"; // Replace with the actual path to your first page
+        }
+    };
+</script>
        
         <div class="container">
             <div class="lst">
